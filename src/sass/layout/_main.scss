@@ -148,51 +148,67 @@ h4{
 	}
 }
 .recipes-section{
-	width: 1600px;
+	
 	margin-bottom: 50px;
 }
 .recipes-section__wrapper{
 	text-align: center;
-	width: 1600px;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	transition: width .2s;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+
+}
+.recipe-item{
+	/*margin: 0 auto;*/
+	position: relative;
+	background: #fff;
+	/*z-index: 0;*/
+	width: 20%;
+		@media(max-width:1024px ){
+					width: 23%;
+					margin:5px 5px;
+				}
+				@media(max-width:768px ){
+					width: 48%;
+					
+				}
+				@media(max-width:568px ){
+					width: 100%;
+					margin:5px 0;
+				}
+
+		img{
+			
+		}
 }
 .title{
-	margin-top: 30px;
-
-	h2{
+	
+	position: absolute;
+	top:30%;
+	bottom: 0;
+	left:0;
+	right: 0;
+		h2{
 			font-size: 36px;
 			color:white;
 			text-transform: uppercase;
+			@media(max-width:1280px ){
+					font-size: 32px;
+				}
+				@media(max-width:768px ){
+					/*font-size: 28px;*/
+				}
 		}
 		span{
 			font-style: italic;
 			font-size: 16px;
 			color:white;
 		}
-}
-.recipe-item__italian{
-		min-width: 300px;
-		height: 225px;
-		background: url('images/Layer 5.png') center center no-repeat;
-		
-	
-}
-.recipe-item__indian{
-		min-width: 300px;
-		background: url('images/Layer 7.png') center center no-repeat;
-	
-}
-.recipe-item__french{
-		min-width: 300px;
-		background: url('images/Layer 8.png') center center no-repeat;
-	
-}
-.recipe-item__steakhouse{
-		min-width: 300px;
-		background: url('images/Layer 9.png') center center no-repeat;
-	
-}
-.recipe-item__seafood{
-		min-width: 300px;
-		background: url('images/Layer 10.png') center center no-repeat;
-	
 }
