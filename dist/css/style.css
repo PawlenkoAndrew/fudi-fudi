@@ -406,6 +406,64 @@ header {
   color: #c8c8c8;
 }
 
+.main-section {
+  position: relative;
+}
+
+.login {
+  width: 250px;
+  height: 300px;
+  position: fixed;
+  left: 53%;
+  margin-left: -150px;
+  top: 30px;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -ms-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  border: 1px solid gray;
+}
+
+.login input[type='email'],
+.login input[type='password'] {
+  margin: 10px 0px;
+  padding: 6px 12px 8px;
+  text-transform: capitalize;
+  border-radius: 3px;
+  border: 1px solid gray;
+  color: black;
+  width: 200px;
+}
+
+.login button {
+  margin: 10px 0px;
+  width: 200px;
+  border-radius: 3px;
+  background-color: #00BFFF;
+  color: white;
+  border: 0;
+  height: 35px;
+  cursor: pointer;
+  display: block;
+}
+
+.login button:hover {
+  background-color: #5181b8;
+}
+
+.login label {
+  /*margin: 20px 0;*/
+}
+
 .d-flex {
   display: -moz-flex;
   display: -ms-flex;
@@ -571,7 +629,7 @@ header {
 .comment-section {
   position: relative;
   width: 100%;
-  height: 460px;
+  height: 260px;
 }
 
 .comment-section__wrap {
@@ -664,17 +722,8 @@ h4 {
 }
 
 .recipe-item {
-  /*margin: 0 auto;*/
   position: relative;
-  background: #fff;
-  /*z-index: 0;*/
   width: 20%;
-}
-
-.recipe-item:hover {
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
 }
 
 @media (max-width: 1024px) {
@@ -695,16 +744,6 @@ h4 {
     width: 100%;
     margin: 5px 0;
   }
-}
-
-.recipe-item img:hover {
-  opacity: 0.5;
-}
-
-.recipe-item .hover {
-  height: 320px;
-  width: 260px;
-  opacity: 0;
 }
 
 .title {
@@ -737,7 +776,7 @@ h4 {
 
 @media (max-width: 768px) {
   .title h2 {
-    /*font-size: 28px;*/
+    font-size: 28px;
   }
 }
 
