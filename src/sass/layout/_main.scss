@@ -55,10 +55,29 @@ section{
 	align-items: flex-end;
 	margin: 90px 0;
 	background-color: #fff;
+		@media(max-width:768px ){
+						-webkit-flex-direction: column;
+						-moz-flex-direction: column;
+						-ms-flex-direction: column;
+						-o-flex-direction: column;
+						flex-direction: column;
+						max-width: 320px;
+						margin: 10px auto;
+					}
 
 }
 .introdusing-app__wrapper{
 	padding-top: 100px;
+	@media(max-width:768px ){
+						-webkit-flex-direction: column;
+						-moz-flex-direction: column;
+						-ms-flex-direction: column;
+						-o-flex-direction: column;
+						flex-direction: column;
+						
+						
+						margin: 10px auto;
+					}
 }
 .introdusing-app{
 	background-color: #f7f7f7;
@@ -100,34 +119,54 @@ section{
 		width: 50%;
 		position: relative;
 		-ms-align-items: center;
+		@media(max-width:768px ){
+						margin: 0 auto;
+						width: 100%;
+						text-align: center;
+					}
+		&:first-child{
+			@media(max-width:968px ){
+						display: none;
+					}
+		}
 		
 		&:last-child{
 			margin-right: 0;
 			margin-left: 50px;
 			margin-top: 70px;
 			position: static;
+			@media(max-width:968px ){
+						margin: 0 auto;
+						width: 100%;
+						text-align: center;
+						margin-bottom: 20px;
+					}
 		}
 	}
 	
 		
-		.iphone{
-			position: absolute;
-			top:150px;
-			left:65px;
-		}
 	.app-links{
 		margin-top: 30px;
 
 	}
 }
 .comment-section{
+	position: relative;
+	width: 100%;
+	height: 460px;
+}
+.comment-section__wrap{
 	
 	background: url('images/Layer 17.png') center center no-repeat;
-	position: relative;
-	font-size: 30px;
+	position: absolute;
+	top: -180px;
+	width: 100%;
 	margin-bottom: 100px;
 	color: #7a6e7a;
 	padding: 80px 0px;
+	@media(max-width:968px ){
+						position: static;
+					}
 
 	
 }
@@ -150,6 +189,38 @@ h4{
 .recipes-section{
 	
 	margin-bottom: 50px;
+	h3{
+		position: relative;
+		font-weight: bold;
+		font-size: 18px;
+		margin:20px 0px;
+		color:black;
+		text-align: center;
+		 &:after{
+			display: block;
+			position: absolute;
+			left: 43%;
+			right: 0;
+			bottom:0px;
+			top:25px;
+			
+			width: 0;
+			height: 2px; 
+			background-color: #f57365; 
+			content: "";
+			transition: width 0.3s ease-out;
+			
+		}
+		&:hover:after,
+			&:focus:after {
+				width: 14%;
+				
+
+			}
+			&:hover{
+				cursor: pointer;
+			} 
+	}
 }
 .recipes-section__wrapper{
 	text-align: center;
@@ -171,6 +242,12 @@ h4{
 	background: #fff;
 	/*z-index: 0;*/
 	width: 20%;
+	&:hover{
+    				opacity: 1;
+				    background: rgba(0,0,0,0.5);
+				    cursor: pointer;
+
+    			}
 		@media(max-width:1024px ){
 					width: 23%;
 					margin:5px 5px;
@@ -185,16 +262,30 @@ h4{
 				}
 
 		img{
-			
+				
+			&:hover{
+				opacity:0.5;
+			}
+		}
+		.hover{
+			height: 320px;
+    		width: 260px;
+    		opacity: 0;
+    			
 		}
 }
 .title{
 	
 	position: absolute;
-	top:30%;
+	top:0;
 	bottom: 0;
 	left:0;
 	right: 0;
+	padding-top: 20%;
+		&:hover{
+				transform:scale(1.2);
+				transition-duration: 0.8s;
+		}
 		h2{
 			font-size: 36px;
 			color:white;
@@ -211,4 +302,30 @@ h4{
 			font-size: 16px;
 			color:white;
 		}
+}
+.counter-wrapper{
+	justify-content: space-between;
+	text-align: center;
+	margin-bottom: 50px;
+	@media(max-width:968px ){
+						-webkit-flex-direction: column;
+						-moz-flex-direction: column;
+						-ms-flex-direction: column;
+						-o-flex-direction: column;
+						flex-direction: column;
+					}
+	h2{
+		font-size: 36px;
+		font-weight: bold;
+	}
+	span{
+		font-weight: lighter;
+		font-size: 16px;
+		text-transform: capitalize;
+	}
+	.counter-item{
+		@media(max-width:968px ){
+						margin: 10px auto;
+					}
+	}
 }
