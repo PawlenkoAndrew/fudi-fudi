@@ -147,7 +147,13 @@ section{
 		
 	.app-links{
 		margin-top: 30px;
-
+		a{
+			display: inline-block;
+				&:hover{
+					transform:scale(1.1);
+					transition-duration: 0.8s;
+				}
+		}
 	}
 }
 .comment-section{
@@ -242,17 +248,17 @@ h4{
 	
 	
 	width: 20%;
+		
 		&:hover{
 				
-				 
 				
+				 filter:brightness(40%);
+				
+			
 			}
-		
 		img{
-		
-			&:hover{
-				
-			}
+		display: block;
+			
 		}
 		
 
@@ -270,7 +276,9 @@ h4{
 				}
 
 		
-		
+		a{
+			display:block;
+		}
     			
 		
 }
